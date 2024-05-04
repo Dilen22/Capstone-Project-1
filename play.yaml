@@ -1,0 +1,13 @@
+--
+- name: installing software on master
+hosts: localhost
+become: true
+tasks:
+. name: master task
+script: master.sh
+name: installing software on slaves
+hosts: slaves
+become: truel
+tasks:
+. name: slave task
+script: slave.sh
